@@ -1,0 +1,6 @@
+{
+    "watch": ["src/*", "app.js"],
+    "ext": "js,html,css",
+    "ignore": ["node_modules/*"]
+  }
+  

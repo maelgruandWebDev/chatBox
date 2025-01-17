@@ -1,0 +1,22 @@
+{
+  "name": "mon-app",
+  "version": "1.0.0",
+  "description": "Mon application Electron",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^17.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "build": {
+    "appId": "com.monapp",
+    "productName": "MonApp",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+/* Styles globaux */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Conteneur principal du chat */
+#chatContainer {
+  width: 800px;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+/* Section du chat */
+.chat-box {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style des messages */
+.message {
+  max-width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+/* Messages de l'utilisateur */
+.from-user {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: white;
+}
+
+/* Messages du bot */
+.from-bot {
+  align-self: flex-start;
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+/* Section de saisie de message */
+.user-input {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+/* Champ de saisie */
+#messageInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* Bouton envoyer */
+#sendButton {
+  padding: 10px 15px;
+  background-color: #0084ff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+#sendButton:hover {
+  background-color: #005bb5;
+}
+
+/* Bouton pour effacer le chat */
+.clear-chat {
+  margin-top: 10px;
+  background-color: #ff4040;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center;
+  width: 80%;
+}
+
+.clear-chat:hover {
+  background-color: #ff1f1f;
+}
+
+/* Animation de l'apparition des messages */
+@keyframes messageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  animation: messageFadeIn 0.3s ease-out;
+}
+
